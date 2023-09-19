@@ -11,8 +11,8 @@ def show_main(request):
     products = Product.objects.all()
 
     context = {
-        'name': 'Pak Bepe', # Nama kamu
-        'class': 'PBP A', # Kelas PBP kamu
+        'name': 'Dimas Herjunodarpito Notoprayitno', # Nama kamu
+        'class': 'PBP C', # Kelas PBP kamu
         'products': products
     }
 
