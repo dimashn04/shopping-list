@@ -19,7 +19,7 @@
                 <a class="nav-link active" aria-current="page" href="#">Main</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Add Product</a>
+                <a class="nav-link" href="{% url 'main:create_product' %}">Add Product</a>
             </li>
             </ul>
             <a class="btn btn-danger mx-2" href="{% url 'main:logout' %}">Logout</a>
@@ -37,7 +37,7 @@
         </div>
     </nav>
 
-    <table class="mx-2 my-2">
+    <table class="mx-1 my-2 table table-striped">
         <tr>
             <th>Name</th>
             <th>Price</th>
@@ -55,12 +55,12 @@
                 <td>{{product.date_added}}</td>
                 <td>
                     <a href="{% url 'main:edit_product' product.pk %}">
-                        <button>
+                        <button type="button" class="btn btn-primary">
                             Edit
                         </button>
                     </a>
                     <a href="{% url 'main:delete_product' product.pk %}">
-                        <button>
+                        <button type="button" class="btn btn-danger">
                             Delete
                         </button>
                     </a>
