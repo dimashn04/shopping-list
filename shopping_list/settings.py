@@ -15,6 +15,9 @@ from pathlib import Path
 import environ # Tambahkan kode berikut
 import os # Tambahkan kode berikut
 
+from django.core.management.commands.runserver import Command as rs
+rs.default_port='8080'
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 env = environ.Env() # Tambahkan kode berikut
